@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+
 using UnityEngine.UI;
 
 public class MenuTab : MonoBehaviour
 {
     public int depthInMenuHeighrachy;
     [System.NonSerialized] public List<MenuTab> childTabs = new List<MenuTab>();
+    public Image selectionBoarder;
 
     private HorizontalLayoutGroup TabLayout;
 
     private void Awake()
     {
         TabLayout = gameObject.GetComponent<HorizontalLayoutGroup>();
+        
     }
 
     public void ApplyIndent(int unitsPerIndent)
@@ -21,29 +23,38 @@ public class MenuTab : MonoBehaviour
         TabLayout.padding.left = depthInMenuHeighrachy * unitsPerIndent;
     }
 
-    public void Collapse()
+    public void CollapseChildren()
     {
         if (childTabs.Count > 0)
             foreach (MenuTab tab in childTabs)
-                tab.Deactivate();
+                tab.Collapse();
     }
 
-    public void Expand()
+    public void ExpandChildren()
     {
         if (childTabs.Count > 0)
             foreach (MenuTab tab in childTabs)
                 tab.gameObject.SetActive(true);
     }
 
-    public void Deactivate()
+    public void Collapse()
     {
-        Collapse();
+        CollapseChildren();
         gameObject.SetActive(false);
+        Debug.Log("Child collapsed");
     }
 
-    public void Activate()
+    public void ExpandCompletely()
     {
         gameObject.SetActive(true);
-        Expand();
+        ExpandChildren();
     }
+
+    public void Expand()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Select() => selectionBoarder.enabled = true;
+    public void Deselect() => selectionBoarder.enabled = false;
 }
