@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +11,14 @@ public class MenuTab : MonoBehaviour
     [System.NonSerialized] public List<MenuTab> childTabs = new List<MenuTab>();
     public Image selectionBoarder;
 
+    public Action ButtonAction;
+
     private HorizontalLayoutGroup TabLayout;
 
     private void Awake()
     {
         TabLayout = gameObject.GetComponent<HorizontalLayoutGroup>();
-        
+        ButtonAction = null;
     }
 
     public void ApplyIndent(int unitsPerIndent)
@@ -57,4 +60,12 @@ public class MenuTab : MonoBehaviour
 
     public void Select() => selectionBoarder.enabled = true;
     public void Deselect() => selectionBoarder.enabled = false;
+
+    public void performAction()
+    {
+        if (ButtonAction != null)
+        {
+
+        }
+    }
 }

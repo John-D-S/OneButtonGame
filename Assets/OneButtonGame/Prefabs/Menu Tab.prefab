@@ -281,8 +281,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu Item
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6a806b87e941adf429bd28609344b8d7, type: 2}
-  m_sharedMaterial: {fileID: -8194746828987232322, guid: 6a806b87e941adf429bd28609344b8d7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 346d56f4efd8dc549928ddfbbae0594d, type: 2}
+  m_sharedMaterial: {fileID: 304256722350128240, guid: 346d56f4efd8dc549928ddfbbae0594d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -316,8 +316,8 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_characterSpacing: -20
+  m_wordSpacing: 30
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
