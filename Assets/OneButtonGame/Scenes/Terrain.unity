@@ -470,7 +470,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &224549813
 PrefabInstance:
@@ -903,7 +903,7 @@ Transform:
   - {fileID: 1105598258}
   - {fileID: 2407340390883575654}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &576274051
 PrefabInstance:
@@ -1200,13 +1200,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745391604}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0, y: 0.9887564, z: -0.14953533, w: 0}
+  m_LocalPosition: {x: 0, y: 15.46, z: 35.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3745622627371222842}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.2, y: 180, z: 0}
 --- !u!1 &778238932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &778238940
 CapsuleCollider:
@@ -2352,7 +2352,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1321619900
 PrefabInstance:
@@ -2668,7 +2668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1374243971
 PrefabInstance:
@@ -3791,7 +3791,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1811096428
 PrefabInstance:
@@ -4013,7 +4013,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1909335187
 PrefabInstance:
@@ -4391,6 +4391,12 @@ GameObject:
   - component: {fileID: 6339803444337066010}
   - component: {fileID: 76536137804695323}
   - component: {fileID: 76536137804695322}
+  - component: {fileID: 76536137804695329}
+  - component: {fileID: 76536137804695328}
+  - component: {fileID: 76536137804695327}
+  - component: {fileID: 76536137804695326}
+  - component: {fileID: 76536137804695325}
+  - component: {fileID: 76536137804695324}
   m_Layer: 0
   m_Name: Back Left Panels
   m_TagString: Untagged
@@ -4410,8 +4416,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 7092160415739148886}
+    connectedRigidbody: {fileID: 7092160415739148887}
+  - connectedConnectable: {fileID: 8404773884474199944}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 7092160415739148886}
+    connectedRigidbody: {fileID: 7092160415739148887}
+  - connectedConnectable: {fileID: 8404773884474199944}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 76536137804695323}
 --- !u!54 &76536137804695323
 Rigidbody:
@@ -4429,6 +4443,88 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &76536137804695324
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_ConnectedBody: {fileID: 8404773884474199945}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &76536137804695325
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_ConnectedBody: {fileID: 7092160415739148887}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &76536137804695326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4908078, y: 3.2752244, z: 0.6154947}
+  m_Center: {x: -0.38793862, y: -0.67304313, z: 3.099441}
+--- !u!65 &76536137804695327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0766065, y: 0.8198991, z: 0.49205542}
+  m_Center: {x: -0.09503925, y: 0.6998327, z: -3.7862847}
+--- !u!65 &76536137804695328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7702038, y: 1.1446643, z: 6.2519503}
+  m_Center: {x: 1.262231, y: 0.42258, z: -0.33794165}
+--- !u!65 &76536137804695329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76536137804695321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4666822, y: 0.64466023, z: 6.1628475}
+  m_Center: {x: -0.4000014, y: 1.2289444, z: -0.35530853}
 --- !u!23 &134676069292157918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4505,8 +4601,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.97596574, y: 0.00000023781575, z: 2.7202952}
   m_UseSpring: 1
   m_Spring:
-    spring: 5000
-    damper: 10
+    spring: 20000
+    damper: 100
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -4642,7 +4738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148054476517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.69, z: 0}
+  m_LocalPosition: {x: 0, y: 28.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1566029118}
@@ -4653,7 +4749,7 @@ Transform:
   - {fileID: 371268673}
   - {fileID: 462702040}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &545381461629077216
 MeshRenderer:
@@ -4829,6 +4925,7 @@ GameObject:
   - component: {fileID: 805161013499545631}
   - component: {fileID: 805161013499545630}
   - component: {fileID: 805161013499545629}
+  - component: {fileID: 805161013499545634}
   m_Layer: 0
   m_Name: Cargo Container
   m_TagString: Untagged
@@ -4962,6 +5059,20 @@ FixedJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!64 &805161013499545634
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805161013499545626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7428027053145129195, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!33 &831247494138340785
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4988,6 +5099,7 @@ GameObject:
   - component: {fileID: 832149485242206676}
   - component: {fileID: 832149485242206675}
   - component: {fileID: 832149485242206674}
+  - component: {fileID: 832149485242206680}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -5009,7 +5121,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!138 &832149485242206674
 FixedJoint:
@@ -5121,6 +5233,20 @@ MonoBehaviour:
   - connectedConnectable: {fileID: 6967107203102373546}
     connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 832149485242206673}
+--- !u!64 &832149485242206680
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832149485242206672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!1 &832743838456152836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,6 +5260,8 @@ GameObject:
   - component: {fileID: 870930044364237070}
   - component: {fileID: 832743838456152838}
   - component: {fileID: 832743838456152837}
+  - component: {fileID: 832743838456152839}
+  - component: {fileID: 832743838456152840}
   m_Layer: 0
   m_Name: Cargo Container Lid Right
   m_TagString: Untagged
@@ -5154,183 +5282,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connections:
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 805161013499545627}
+    connectedRigidbody: {fileID: 805161013499545628}
   oldConnections:
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 805161013499545627}
+    connectedRigidbody: {fileID: 805161013499545628}
   rigidBody: {fileID: 832743838456152838}
 --- !u!54 &832743838456152838
 Rigidbody:
@@ -5348,6 +5304,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &832743838456152839
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832743838456152836}
+  m_ConnectedBody: {fileID: 805161013499545628}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!64 &832743838456152840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832743838456152836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 199908379906642078, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!23 &870930044364237070
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5398,6 +5383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652527664223}
+  - component: {fileID: 919132148054476518}
   m_Layer: 0
   m_Name: PlayerVehicle
   m_TagString: Untagged
@@ -5405,6 +5391,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132148054476518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148054476517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8728cea4b29f27d4e8e882cd59a16227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motorForce: 200
+  motorForceSteeringDifference: 200
+  motorVelocity: 1000
+  motorVelocitySteeringDifference: 1000
+  leftWheels:
+  - {fileID: 7588512581065626617}
+  - {fileID: 5835000548947894467}
+  rightWheels:
+  - {fileID: 1472345029815933022}
+  - {fileID: 9091794401718898258}
+  steeringArmAngle: 30
+  steeringLerpSpeed: 0.04
+  leftArms:
+  - {fileID: 3655000509597349301}
+  - {fileID: 3073800285718714182}
+  rightArms:
+  - {fileID: 3709475211722704214}
+  - {fileID: 186147088540055595}
 --- !u!33 &923620457031584945
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5439,6 +5455,9 @@ GameObject:
   - component: {fileID: 971123163518793167}
   - component: {fileID: 971123163518793166}
   - component: {fileID: 971123163518793165}
+  - component: {fileID: 971123163518793168}
+  - component: {fileID: 971123163518793169}
+  - component: {fileID: 971123163518793170}
   m_Layer: 0
   m_Name: Front Right Inner Chassis
   m_TagString: Untagged
@@ -5515,6 +5534,10 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 6915678878311284212}
   - connectedConnectable: {fileID: 8969064379229074095}
     connectedRigidbody: {fileID: 6915678878311284212}
+  - connectedConnectable: {fileID: 9135834039965861580}
+    connectedRigidbody: {fileID: 9135834039965861581}
+  - connectedConnectable: {fileID: 4820542771150443778}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 832149485242206679}
     connectedRigidbody: {fileID: 832149485242206673}
@@ -5526,6 +5549,10 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 6915678878311284212}
   - connectedConnectable: {fileID: 8969064379229074095}
     connectedRigidbody: {fileID: 6915678878311284212}
+  - connectedConnectable: {fileID: 9135834039965861580}
+    connectedRigidbody: {fileID: 9135834039965861581}
+  - connectedConnectable: {fileID: 4820542771150443778}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 971123163518793161}
 --- !u!138 &971123163518793165
 FixedJoint:
@@ -5565,6 +5592,50 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971123163518793160}
   m_ConnectedBody: {fileID: 5755080436557775265}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!64 &971123163518793168
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971123163518793160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -606842316112700062, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &971123163518793169
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971123163518793160}
+  m_ConnectedBody: {fileID: 9135834039965861581}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &971123163518793170
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971123163518793160}
+  m_ConnectedBody: {fileID: 4820542771150443779}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -5786,17 +5857,17 @@ HingeJoint:
   m_ConnectedBody: {fileID: 3709475211722704215}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: -1, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.019515991, y: -1.1935325, z: -7.024141}
+  m_ConnectedAnchor: {x: -0.019515991, y: -1.193533, z: -7.024141}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
-    targetVelocity: 0
+    targetVelocity: 1000
     force: 0
     freeSpin: 0
   m_UseLimits: 0
@@ -5932,6 +6003,10 @@ GameObject:
   - component: {fileID: 1479375541111579478}
   - component: {fileID: 1643838569447074597}
   - component: {fileID: 1643838569447074596}
+  - component: {fileID: 1643838569447074600}
+  - component: {fileID: 1643838569447074599}
+  - component: {fileID: 1643838569447074598}
+  - component: {fileID: 1643838569447074601}
   m_Layer: 0
   m_Name: Side Right Panel
   m_TagString: Untagged
@@ -5951,8 +6026,306 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 7777219819250495691}
+    connectedRigidbody: {fileID: 7777219819250495692}
+  oldConnections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 1643838569447074597}
 --- !u!54 &1643838569447074597
 Rigidbody:
@@ -5970,6 +6343,60 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1643838569447074598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643838569447074595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91755104, y: 0.36210978, z: 5.6737576}
+  m_Center: {x: 4.028638, y: 1.3505578, z: 4.483428}
+--- !u!65 &1643838569447074599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643838569447074595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.927927, y: 0.40412378, z: 1.3958015}
+  m_Center: {x: 3.02345, y: 1.6556468, z: 0.94790065}
+--- !u!65 &1643838569447074600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643838569447074595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4023857, y: 2.1549053, z: 4.831437}
+  m_Center: {x: 4.2862206, y: 0.36911893, z: 2.6657186}
+--- !u!138 &1643838569447074601
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643838569447074595}
+  m_ConnectedBody: {fileID: 7777219819250495692}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!4 &1691291263906719329
 Transform:
   m_ObjectHideFlags: 0
@@ -5997,6 +6424,9 @@ GameObject:
   - component: {fileID: 2508591784062392220}
   - component: {fileID: 1714971694593257241}
   - component: {fileID: 1714971694593257240}
+  - component: {fileID: 1714971694593257244}
+  - component: {fileID: 1714971694593257243}
+  - component: {fileID: 1714971694593257242}
   m_Layer: 0
   m_Name: Turret Rotor
   m_TagString: Untagged
@@ -6016,8 +6446,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 6967107203102373546}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 2931507991672286817}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 6967107203102373546}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 2931507991672286817}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 1714971694593257241}
 --- !u!54 &1714971694593257241
 Rigidbody:
@@ -6035,6 +6473,50 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &1714971694593257242
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714971694593257239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2856398659766672615, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &1714971694593257243
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714971694593257239}
+  m_ConnectedBody: {fileID: 2931507991672286818}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &1714971694593257244
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714971694593257239}
+  m_ConnectedBody: {fileID: 6967107203102373547}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!4 &2137257703388367446
 Transform:
   m_ObjectHideFlags: 0
@@ -6241,6 +6723,10 @@ GameObject:
   - component: {fileID: 8079161014584853931}
   - component: {fileID: 2786143539142261531}
   - component: {fileID: 2786143539142261530}
+  - component: {fileID: 2786143539142261534}
+  - component: {fileID: 2786143539142261533}
+  - component: {fileID: 2786143539142261532}
+  - component: {fileID: 2786143539142261535}
   m_Layer: 0
   m_Name: Side Left Panel
   m_TagString: Untagged
@@ -6260,8 +6746,310 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 7092160415739148886}
+    connectedRigidbody: {fileID: 7092160415739148887}
+  oldConnections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 2786143539142261531}
 --- !u!54 &2786143539142261531
 Rigidbody:
@@ -6279,6 +7067,60 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2786143539142261532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786143539142261529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91755104, y: 0.36210978, z: 5.6737576}
+  m_Center: {x: 4.028638, y: 1.3505578, z: 4.483428}
+--- !u!65 &2786143539142261533
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786143539142261529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.927927, y: 0.40412378, z: 1.3958015}
+  m_Center: {x: 3.02345, y: 1.6556468, z: 0.94790065}
+--- !u!65 &2786143539142261534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786143539142261529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4023857, y: 2.1549053, z: 4.831437}
+  m_Center: {x: 4.2862206, y: 0.36911893, z: 2.6657186}
+--- !u!138 &2786143539142261535
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786143539142261529}
+  m_ConnectedBody: {fileID: 7092160415739148887}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!33 &2862534972087724600
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6314,6 +7156,8 @@ GameObject:
   - component: {fileID: 5763431570653932177}
   - component: {fileID: 2931507991672286818}
   - component: {fileID: 2931507991672286817}
+  - component: {fileID: 2931507991672286819}
+  - component: {fileID: 2931507991672286820}
   m_Layer: 0
   m_Name: Turret Barrel
   m_TagString: Untagged
@@ -6333,8 +7177,316 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 2931507991672286818}
 --- !u!54 &2931507991672286818
 Rigidbody:
@@ -6352,6 +7504,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &2931507991672286819
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931507991672286816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8631993287065638956, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &2931507991672286820
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931507991672286816}
+  m_ConnectedBody: {fileID: 1714971694593257241}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!23 &2969410087437324158
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6450,8 +7631,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.97596574, y: 0, z: 2.7202957}
   m_UseSpring: 1
   m_Spring:
-    spring: 5000
-    damper: 10
+    spring: 20000
+    damper: 100
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -6515,6 +7696,7 @@ GameObject:
   - component: {fileID: 3515026125653361969}
   - component: {fileID: 3515026125653361968}
   - component: {fileID: 3515026125653361971}
+  - component: {fileID: 3515026125653361970}
   m_Layer: 0
   m_Name: Container Connector Left
   m_TagString: Untagged
@@ -6537,6 +7719,66 @@ MonoBehaviour:
   connections:
   - connectedConnectable: {fileID: 7092160415739148886}
     connectedRigidbody: {fileID: 7092160415739148887}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
@@ -6716,6 +7958,66 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 3515026125653361969}
 --- !u!54 &3515026125653361969
 Rigidbody:
@@ -6733,6 +8035,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &3515026125653361970
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515026125653361967}
+  m_ConnectedBody: {fileID: 805161013499545628}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!138 &3515026125653361971
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -6894,8 +8211,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.7142093, y: 0.0001654625, z: -0.72963643}
   m_UseSpring: 1
   m_Spring:
-    spring: 5000
-    damper: 10
+    spring: 20000
+    damper: 100
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -6980,8 +8297,8 @@ HingeJoint:
   m_ConnectedAnchor: {x: 0.7142091, y: 0.0001653987, z: -0.72963655}
   m_UseSpring: 1
   m_Spring:
-    spring: 5000
-    damper: 10
+    spring: 20000
+    damper: 100
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -7027,7 +8344,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 745391607}
   m_Father: {fileID: 1566029118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7176,6 +8494,10 @@ GameObject:
   - component: {fileID: 8074501449818724261}
   - component: {fileID: 4820542771150443779}
   - component: {fileID: 4820542771150443778}
+  - component: {fileID: 4820542771150443783}
+  - component: {fileID: 4820542771150443782}
+  - component: {fileID: 4820542771150443781}
+  - component: {fileID: 4820542771150443780}
   m_Layer: 0
   m_Name: Front Camera
   m_TagString: Untagged
@@ -7195,8 +8517,294 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 971123163518793164}
+    connectedRigidbody: {fileID: 971123163518793161}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 6915678878311284218}
+    connectedRigidbody: {fileID: 6915678878311284212}
+  oldConnections:
+  - connectedConnectable: {fileID: 971123163518793164}
+    connectedRigidbody: {fileID: 971123163518793161}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 4820542771150443779}
 --- !u!54 &4820542771150443779
 Rigidbody:
@@ -7214,6 +8822,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &4820542771150443780
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820542771150443777}
+  m_ConnectedBody: {fileID: 6915678878311284212}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &4820542771150443781
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820542771150443777}
+  m_ConnectedBody: {fileID: 971123163518793161}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &4820542771150443782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820542771150443777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.622272, z: 0.4983673}
+  m_Center: {x: 0, y: -0.3486359, z: -0.25057817}
+--- !u!65 &4820542771150443783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4820542771150443777}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.4812808, z: 1.5}
+  m_Center: {x: 0, y: 0.6959145, z: 0.25023818}
 --- !u!33 &4847004163526657643
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7287,6 +8951,8 @@ GameObject:
   - component: {fileID: 5016895812298452022}
   - component: {fileID: 5016895812298452021}
   - component: {fileID: 5016895812298452024}
+  - component: {fileID: 5016895812298452023}
+  - component: {fileID: 5016895812298452025}
   m_Layer: 0
   m_Name: Front Left Outer Chassis
   m_TagString: Untagged
@@ -7342,12 +9008,252 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 6915678878311284212}
   - connectedConnectable: {fileID: 7092160415739148886}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 7185492380581506882}
+    connectedRigidbody: {fileID: 7185492380581506883}
   oldConnections:
   - connectedConnectable: {fileID: 6915678878311284218}
     connectedRigidbody: {fileID: 6915678878311284212}
   - connectedConnectable: {fileID: 7092160415739148886}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 5016895812298452020}
+--- !u!64 &5016895812298452023
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016895812298452019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2606261440405092803, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!138 &5016895812298452024
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -7356,6 +9262,21 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5016895812298452019}
   m_ConnectedBody: {fileID: 7092160415739148887}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &5016895812298452025
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016895812298452019}
+  m_ConnectedBody: {fileID: 7185492380581506883}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -7578,6 +9499,8 @@ GameObject:
   - component: {fileID: 5755080436557775272}
   - component: {fileID: 5755080436557775271}
   - component: {fileID: 5755080436557775268}
+  - component: {fileID: 5755080436557775274}
+  - component: {fileID: 5755080436557775275}
   m_Layer: 0
   m_Name: Back Right Inner Chassis
   m_TagString: Untagged
@@ -7643,6 +9566,156 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 8404773884474199945}
   - connectedConnectable: {fileID: 6967107203102373546}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 5889260619880334142}
+    connectedRigidbody: {fileID: 5889260619880334143}
   oldConnections:
   - connectedConnectable: {fileID: 832149485242206679}
     connectedRigidbody: {fileID: 832149485242206673}
@@ -7657,6 +9730,154 @@ MonoBehaviour:
   - connectedConnectable: {fileID: 8404773884474199944}
     connectedRigidbody: {fileID: 8404773884474199945}
   - connectedConnectable: {fileID: 6967107203102373546}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 5755080436557775265}
 --- !u!138 &5755080436557775268
@@ -7742,6 +9963,35 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5755080436557775264}
   m_ConnectedBody: {fileID: 8969064379229074096}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!64 &5755080436557775274
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755080436557775264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4519141125320038476, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &5755080436557775275
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755080436557775264}
+  m_ConnectedBody: {fileID: 5889260619880334143}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -7893,15 +10143,15 @@ HingeJoint:
   m_Anchor: {x: -1, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.019515991, y: -1.1935325, z: -7.0241413}
+  m_ConnectedAnchor: {x: -0.019515991, y: -1.193533, z: -7.0241413}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
-    targetVelocity: 0
+    targetVelocity: 1000
     force: 0
     freeSpin: 0
   m_UseLimits: 0
@@ -7930,6 +10180,12 @@ GameObject:
   - component: {fileID: 7633895073835652939}
   - component: {fileID: 5889260619880334143}
   - component: {fileID: 5889260619880334142}
+  - component: {fileID: 5889260619880334149}
+  - component: {fileID: 5889260619880334148}
+  - component: {fileID: 5889260619880334147}
+  - component: {fileID: 5889260619880334146}
+  - component: {fileID: 5889260619880334145}
+  - component: {fileID: 5889260619880334144}
   m_Layer: 0
   m_Name: Back Right Panel
   m_TagString: Untagged
@@ -7949,8 +10205,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 7777219819250495691}
+    connectedRigidbody: {fileID: 7777219819250495692}
+  - connectedConnectable: {fileID: 5755080436557775267}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 7777219819250495691}
+    connectedRigidbody: {fileID: 7777219819250495692}
+  - connectedConnectable: {fileID: 5755080436557775267}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 5889260619880334143}
 --- !u!54 &5889260619880334143
 Rigidbody:
@@ -7968,6 +10232,88 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &5889260619880334144
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_ConnectedBody: {fileID: 5755080436557775265}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &5889260619880334145
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_ConnectedBody: {fileID: 7777219819250495692}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &5889260619880334146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4908078, y: 3.2752244, z: 0.6154947}
+  m_Center: {x: -0.38793862, y: -0.67304313, z: 3.099441}
+--- !u!65 &5889260619880334147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0766065, y: 0.8198991, z: 0.49205542}
+  m_Center: {x: -0.09503925, y: 0.6998327, z: -3.7862847}
+--- !u!65 &5889260619880334148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7702038, y: 1.1446643, z: 6.2519503}
+  m_Center: {x: 1.262231, y: 0.42258, z: -0.33794165}
+--- !u!65 &5889260619880334149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5889260619880334141}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4666822, y: 0.64466023, z: 6.1628475}
+  m_Center: {x: -0.4000014, y: 1.2289444, z: -0.35530853}
 --- !u!4 &5955878859992785033
 Transform:
   m_ObjectHideFlags: 0
@@ -7996,6 +10342,7 @@ GameObject:
   - component: {fileID: 6003043679830846716}
   - component: {fileID: 6003043679830846715}
   - component: {fileID: 6003043679830846717}
+  - component: {fileID: 6003043679830846718}
   m_Layer: 0
   m_Name: Container Connector Right
   m_TagString: Untagged
@@ -8018,6 +10365,34 @@ MonoBehaviour:
   connections:
   - connectedConnectable: {fileID: 7777219819250495691}
     connectedRigidbody: {fileID: 7777219819250495692}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
@@ -8197,6 +10572,34 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 6003043679830846716}
 --- !u!54 &6003043679830846716
 Rigidbody:
@@ -8222,6 +10625,21 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6003043679830846714}
   m_ConnectedBody: {fileID: 7777219819250495692}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &6003043679830846718
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6003043679830846714}
+  m_ConnectedBody: {fileID: 805161013499545628}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -8453,6 +10871,8 @@ GameObject:
   - component: {fileID: 4440150146811789836}
   - component: {fileID: 6651856510583471640}
   - component: {fileID: 6651856510583471639}
+  - component: {fileID: 6651856510583471641}
+  - component: {fileID: 6651856510583471642}
   m_Layer: 0
   m_Name: Cargo Container Lid Left
   m_TagString: Untagged
@@ -8473,183 +10893,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connections:
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 805161013499545627}
+    connectedRigidbody: {fileID: 805161013499545628}
   oldConnections:
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 805161013499545627}
+    connectedRigidbody: {fileID: 805161013499545628}
   rigidBody: {fileID: 6651856510583471640}
 --- !u!54 &6651856510583471640
 Rigidbody:
@@ -8667,6 +10915,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &6651856510583471641
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651856510583471638}
+  m_ConnectedBody: {fileID: 805161013499545628}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!64 &6651856510583471642
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6651856510583471638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 199908379906642078, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!1 &6915678878311284211
 GameObject:
   m_ObjectHideFlags: 0
@@ -8685,6 +10962,9 @@ GameObject:
   - component: {fileID: 6915678878311284215}
   - component: {fileID: 6915678878311284214}
   - component: {fileID: 6915678878311284213}
+  - component: {fileID: 6915678878311284219}
+  - component: {fileID: 6915678878311284220}
+  - component: {fileID: 6915678878311284221}
   m_Layer: 0
   m_Name: Front Left Inner Chassis
   m_TagString: Untagged
@@ -8802,14 +11082,14 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 5016895812298452022}
     connectedRigidbody: {fileID: 832149485242206673}
-  - connectedConnectable: {fileID: 6967107203102373546}
-    connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 8404773884474199944}
     connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 971123163518793164}
     connectedRigidbody: {fileID: 832149485242206673}
-  - connectedConnectable: {fileID: 971123163518793164}
-    connectedRigidbody: {fileID: 832149485242206673}
+  - connectedConnectable: {fileID: 7185492380581506882}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 4820542771150443778}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 832149485242206679}
     connectedRigidbody: {fileID: 832149485242206673}
@@ -8817,15 +11097,59 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 5016895812298452022}
     connectedRigidbody: {fileID: 832149485242206673}
-  - connectedConnectable: {fileID: 6967107203102373546}
-    connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 8404773884474199944}
     connectedRigidbody: {fileID: 832149485242206673}
   - connectedConnectable: {fileID: 971123163518793164}
     connectedRigidbody: {fileID: 832149485242206673}
-  - connectedConnectable: {fileID: 971123163518793164}
-    connectedRigidbody: {fileID: 832149485242206673}
+  - connectedConnectable: {fileID: 7185492380581506882}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 4820542771150443778}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 6915678878311284212}
+--- !u!64 &6915678878311284219
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915678878311284211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -606842316112700062, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &6915678878311284220
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915678878311284211}
+  m_ConnectedBody: {fileID: 7185492380581506883}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &6915678878311284221
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915678878311284211}
+  m_ConnectedBody: {fileID: 4820542771150443779}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!4 &6956930490318744600
 Transform:
   m_ObjectHideFlags: 0
@@ -8857,6 +11181,8 @@ GameObject:
   - component: {fileID: 6967107203102373544}
   - component: {fileID: 6967107203102373548}
   - component: {fileID: 6967107203102373550}
+  - component: {fileID: 6967107203102373549}
+  - component: {fileID: 6967107203102373551}
   m_Layer: 0
   m_Name: Turret Mount
   m_TagString: Untagged
@@ -9003,6 +11329,142 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 1714971694593257240}
+    connectedRigidbody: {fileID: 1714971694593257241}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 832149485242206679}
     connectedRigidbody: {fileID: 832149485242206673}
@@ -9012,6 +11474,142 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 971123163518793161}
   - connectedConnectable: {fileID: 8404773884474199944}
     connectedRigidbody: {fileID: 8404773884474199945}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 1714971694593257240}
+    connectedRigidbody: {fileID: 1714971694593257241}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 0}
@@ -9132,6 +11730,21 @@ FixedJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!138 &6967107203102373549
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967107203102373543}
+  m_ConnectedBody: {fileID: 1714971694593257241}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!138 &6967107203102373550
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -9140,6 +11753,21 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6967107203102373543}
   m_ConnectedBody: {fileID: 8404773884474199945}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &6967107203102373551
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967107203102373543}
+  m_ConnectedBody: {fileID: 5755080436557775265}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -9204,6 +11832,9 @@ GameObject:
   - component: {fileID: 7092160415739148891}
   - component: {fileID: 7092160415739148890}
   - component: {fileID: 7092160415739148888}
+  - component: {fileID: 7092160415739148889}
+  - component: {fileID: 7092160415739148893}
+  - component: {fileID: 7092160415739148892}
   m_Layer: 0
   m_Name: Back Left Outer Chassis
   m_TagString: Untagged
@@ -9228,143 +11859,23 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 3515026125653361968}
     connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 5016895812298452022}
     connectedRigidbody: {fileID: 5016895812298452020}
+  - connectedConnectable: {fileID: 2786143539142261530}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 76536137804695322}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 8404773884474199944}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 3515026125653361968}
     connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
-  - connectedConnectable: {fileID: 0}
-    connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 5016895812298452022}
     connectedRigidbody: {fileID: 5016895812298452020}
+  - connectedConnectable: {fileID: 2786143539142261530}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 76536137804695322}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 7092160415739148887}
 --- !u!54 &7092160415739148887
 Rigidbody:
@@ -9397,6 +11908,19 @@ FixedJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!65 &7092160415739148889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092160415739148885}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 7}
+  m_Center: {x: 0.2, y: 7.4348486e-16, z: 0.32446337}
 --- !u!138 &7092160415739148890
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -9420,6 +11944,36 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7092160415739148885}
   m_ConnectedBody: {fileID: 8404773884474199945}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &7092160415739148892
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092160415739148885}
+  m_ConnectedBody: {fileID: 76536137804695323}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &7092160415739148893
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092160415739148885}
+  m_ConnectedBody: {fileID: 2786143539142261531}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -9454,6 +12008,11 @@ GameObject:
   - component: {fileID: 6494026920366066873}
   - component: {fileID: 7185492380581506883}
   - component: {fileID: 7185492380581506882}
+  - component: {fileID: 7185492380581506888}
+  - component: {fileID: 7185492380581506887}
+  - component: {fileID: 7185492380581506886}
+  - component: {fileID: 7185492380581506885}
+  - component: {fileID: 7185492380581506884}
   m_Layer: 0
   m_Name: Front Left Panel
   m_TagString: Untagged
@@ -9473,8 +12032,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 6915678878311284218}
+    connectedRigidbody: {fileID: 6915678878311284212}
+  - connectedConnectable: {fileID: 5016895812298452022}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 6915678878311284218}
+    connectedRigidbody: {fileID: 6915678878311284212}
+  - connectedConnectable: {fileID: 5016895812298452022}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 7185492380581506883}
 --- !u!54 &7185492380581506883
 Rigidbody:
@@ -9492,6 +12059,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &7185492380581506884
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185492380581506881}
+  m_ConnectedBody: {fileID: 5016895812298452020}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &7185492380581506885
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185492380581506881}
+  m_ConnectedBody: {fileID: 6915678878311284212}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &7185492380581506886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185492380581506881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7166493, y: 1.7963407, z: 0.36933327}
+  m_Center: {x: 1.8716563, y: 0.1898371, z: -3.362802}
+--- !u!65 &7185492380581506887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185492380581506881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5413103, y: 1.8021052, z: 1.3487297}
+  m_Center: {x: 4.216637, y: 0.19271934, z: -0.42436534}
+--- !u!65 &7185492380581506888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185492380581506881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.47396, y: 0.38908005, z: 3.4160721}
+  m_Center: {x: 2.7503119, y: 1.2790427, z: -1.4580361}
 --- !u!23 &7202271455822826859
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9738,16 +12374,16 @@ HingeJoint:
   m_Anchor: {x: -1, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.019515991, y: -1.1935334, z: -7.024139}
+  m_ConnectedAnchor: {x: -0.019515991, y: -1.193533, z: -7.024139}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
-    targetVelocity: 0
-    force: 0
+    targetVelocity: 1000
+    force: 100
     freeSpin: 0
   m_UseLimits: 0
   m_Limits:
@@ -9828,6 +12464,9 @@ GameObject:
   - component: {fileID: 7777219819250495696}
   - component: {fileID: 7777219819250495695}
   - component: {fileID: 7777219819250495694}
+  - component: {fileID: 7777219819250495693}
+  - component: {fileID: 7777219819250495698}
+  - component: {fileID: 7777219819250495697}
   m_Layer: 0
   m_Name: Back Right Outer Chassis
   m_TagString: Untagged
@@ -9854,12 +12493,20 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 6003043679830846715}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 1643838569447074596}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 5889260619880334142}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 8969064379229074095}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 5755080436557775267}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 6003043679830846715}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 1643838569447074596}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 5889260619880334142}
     connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 7777219819250495692}
 --- !u!54 &7777219819250495692
@@ -9878,6 +12525,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &7777219819250495693
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777219819250495690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 7}
+  m_Center: {x: 0.2, y: 7.4348486e-16, z: 0.32446337}
 --- !u!138 &7777219819250495694
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -9916,6 +12576,36 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7777219819250495690}
   m_ConnectedBody: {fileID: 8969064379229074096}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &7777219819250495697
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777219819250495690}
+  m_ConnectedBody: {fileID: 5889260619880334143}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &7777219819250495698
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777219819250495690}
+  m_ConnectedBody: {fileID: 1643838569447074597}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -10078,6 +12768,8 @@ GameObject:
   - component: {fileID: 8404773884474199948}
   - component: {fileID: 8404773884474199947}
   - component: {fileID: 8404773884474199946}
+  - component: {fileID: 8404773884474199950}
+  - component: {fileID: 8404773884474199951}
   m_Layer: 0
   m_Name: Back Left Inner Chassis
   m_TagString: Untagged
@@ -10140,6 +12832,122 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 6967107203102373546}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 832149485242206679}
     connectedRigidbody: {fileID: 832149485242206673}
@@ -10152,6 +12960,122 @@ MonoBehaviour:
   - connectedConnectable: {fileID: 5755080436557775267}
     connectedRigidbody: {fileID: 0}
   - connectedConnectable: {fileID: 6967107203102373546}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 0}
     connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 8404773884474199945}
 --- !u!54 &8404773884474199945
@@ -10223,6 +13147,35 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8404773884474199941}
   m_ConnectedBody: {fileID: 7092160415739148887}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!64 &8404773884474199950
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404773884474199941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4519141125320038476, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
+--- !u!138 &8404773884474199951
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404773884474199941}
+  m_ConnectedBody: {fileID: 76536137804695323}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -10325,6 +13278,8 @@ GameObject:
   - component: {fileID: 8969064379229074099}
   - component: {fileID: 8969064379229074098}
   - component: {fileID: 8969064379229074100}
+  - component: {fileID: 8969064379229074097}
+  - component: {fileID: 8969064379229074101}
   m_Layer: 0
   m_Name: Front Right Outer Chassis
   m_TagString: Untagged
@@ -10351,12 +13306,16 @@ MonoBehaviour:
     connectedRigidbody: {fileID: 7777219819250495692}
   - connectedConnectable: {fileID: 5755080436557775267}
     connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 9135834039965861580}
+    connectedRigidbody: {fileID: 0}
   oldConnections:
   - connectedConnectable: {fileID: 971123163518793164}
     connectedRigidbody: {fileID: 971123163518793161}
   - connectedConnectable: {fileID: 7777219819250495691}
     connectedRigidbody: {fileID: 7777219819250495692}
   - connectedConnectable: {fileID: 5755080436557775267}
+    connectedRigidbody: {fileID: 0}
+  - connectedConnectable: {fileID: 9135834039965861580}
     connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 8969064379229074096}
 --- !u!54 &8969064379229074096
@@ -10375,6 +13334,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &8969064379229074097
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969064379229074094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2606261440405092803, guid: 1e90ec82d5e90604398f8856f83d8120, type: 3}
 --- !u!138 &8969064379229074098
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -10413,6 +13386,21 @@ FixedJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8969064379229074094}
   m_ConnectedBody: {fileID: 5755080436557775265}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &8969064379229074101
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8969064379229074094}
+  m_ConnectedBody: {fileID: 9135834039965861581}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -10467,17 +13455,17 @@ HingeJoint:
   m_ConnectedBody: {fileID: 186147088540055596}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: -1, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.019515887, y: -1.1935328, z: -7.024141}
+  m_ConnectedAnchor: {x: -0.019515887, y: -1.1935323, z: -7.024141}
   m_UseSpring: 0
   m_Spring:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
-    targetVelocity: 0
+    targetVelocity: 1000
     force: 0
     freeSpin: 0
   m_UseLimits: 0
@@ -10519,6 +13507,11 @@ GameObject:
   - component: {fileID: 5471094212963220940}
   - component: {fileID: 9135834039965861581}
   - component: {fileID: 9135834039965861580}
+  - component: {fileID: 9135834039965861586}
+  - component: {fileID: 9135834039965861585}
+  - component: {fileID: 9135834039965861584}
+  - component: {fileID: 9135834039965861583}
+  - component: {fileID: 9135834039965861582}
   m_Layer: 0
   m_Name: Front Right Panel
   m_TagString: Untagged
@@ -10538,8 +13531,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40df843a220f2b5439c85d01badb51e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
-  oldConnections: []
+  connections:
+  - connectedConnectable: {fileID: 8969064379229074095}
+    connectedRigidbody: {fileID: 8969064379229074096}
+  - connectedConnectable: {fileID: 971123163518793164}
+    connectedRigidbody: {fileID: 0}
+  oldConnections:
+  - connectedConnectable: {fileID: 8969064379229074095}
+    connectedRigidbody: {fileID: 8969064379229074096}
+  - connectedConnectable: {fileID: 971123163518793164}
+    connectedRigidbody: {fileID: 0}
   rigidBody: {fileID: 9135834039965861581}
 --- !u!54 &9135834039965861581
 Rigidbody:
@@ -10557,6 +13558,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!138 &9135834039965861582
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135834039965861579}
+  m_ConnectedBody: {fileID: 971123163518793161}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!138 &9135834039965861583
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135834039965861579}
+  m_ConnectedBody: {fileID: 8969064379229074096}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!65 &9135834039965861584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135834039965861579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7166493, y: 1.7963407, z: 0.36933327}
+  m_Center: {x: 1.8716563, y: 0.1898371, z: -3.362802}
+--- !u!65 &9135834039965861585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135834039965861579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5413103, y: 1.8021052, z: 1.3487297}
+  m_Center: {x: 4.216637, y: 0.19271934, z: -0.42436534}
+--- !u!65 &9135834039965861586
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135834039965861579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.47396, y: 0.38908005, z: 3.4160721}
+  m_Center: {x: 2.7503119, y: 1.2790427, z: -1.4580361}
 --- !u!4 &9145819663817648913
 Transform:
   m_ObjectHideFlags: 0

@@ -172,7 +172,7 @@ public class Connectable : MonoBehaviour
         {
             foreach (Connection connection in connections)
             {
-                if (connection.connectedConnectable)
+                if (connection != null && connection.connectedConnectable)
                 {
                     Gizmos.DrawLine(transform.position, connection.connectedConnectable.gameObject.transform.position);
                 }
